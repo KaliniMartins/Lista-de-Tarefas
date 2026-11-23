@@ -1,0 +1,200 @@
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #eef2f7;
+  color: #374151;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  padding: 45px 16px;
+}
+
+main {
+  background: #ffffff;
+  width: 100%;
+  max-width: 540px;
+  padding: 30px;
+  border-radius: 14px;
+  box-shadow: 0 5px 20px rgba(40, 60, 90, 0.08);
+  height: fit-content;
+}
+
+h1 {
+  color: #30466b;
+  font-size: 26px;
+  margin-bottom: 24px;
+}
+
+/* Entrada de tarefas */
+.entrada {
+  display: flex;
+  gap: 9px;
+  margin-bottom: 12px;
+}
+
+#campo-tarefa {
+  flex: 1;
+  padding: 12px 14px;
+  border: 1px solid #dce3ed;
+  border-radius: 8px;
+  font-size: 14px;
+  background: #fafbfd;
+}
+
+#campo-tarefa:focus {
+  outline: none;
+  border-color: #7796c2;
+  background: #fff;
+}
+
+/* Botões */
+button {
+  border: none;
+  border-radius: 8px;
+  padding: 10px 15px;
+  background: #6685b2;
+  color: white;
+  font-size: 14px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+button:hover {
+  background: #506f9c;
+}
+
+/* Filtros */
+.filtros {
+  display: flex;
+  gap: 8px;
+  margin: 20px 0;
+}
+
+.filtros button {
+  flex: 1;
+  background: #edf1f7;
+  color: #536783;
+}
+
+.filtros button:hover {
+  background: #dce6f3;
+}
+
+/* Lista */
+#lista-tarefas {
+  list-style: none;
+  margin-top: 16px;
+}
+
+#lista-tarefas li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  padding: 15px;
+  margin-bottom: 11px;
+  background: #fafbfd;
+  border: 1px solid #e8edf3;
+  border-left: 5px solid #dce3ec;
+  border-radius: 9px;
+  transition: 0.2s;
+}
+
+#lista-tarefas li:hover {
+  background: #f4f7fb;
+  border-color: #dce4ef;
+}
+
+/* Prioridades */
+.alta {
+  border-left: 5px solid #e05252 !important;
+  background: #fff8f8 !important;
+}
+
+.media {
+  border-left: 5px solid #e6b83f !important;
+  background: #fffdf5 !important;
+}
+
+.baixa {
+  border-left: 5px solid #55a873 !important;
+  background: #f7fcf8 !important;
+}
+
+/* Concluídas */
+.concluida {
+  text-decoration: line-through;
+  color: #a0a7b1;
+  opacity: 0.65;
+}
+
+/* Remover tarefa */
+.btn-remover {
+  background: transparent;
+  color: #d65b5b;
+  padding: 6px 9px;
+  font-size: 16px;
+}
+
+.btn-remover:hover {
+  background: #fce8e8;
+}
+
+/* Limpar concluídos */
+#btn-limpar {
+  width: 100%;
+  margin-top: 14px;
+  background: #8291a6;
+}
+
+#btn-limpar:hover {
+  background: #697a91;
+}
+
+/* Contadores */
+#contador,
+#contador-caracteres {
+  color: #7b8491;
+  font-size: 13px;
+  margin: 10px 0;
+}
+
+.erro {
+  color: #dc2626 !important;
+}
+
+/* Prioridade */
+select {
+  padding: 11px;
+  border: 1px solid #dce3ed;
+  border-radius: 8px;
+  background: #fafbfd;
+  color: #46546a;
+  cursor: pointer;
+}
+
+select:focus {
+  outline: none;
+  border-color: #7796c2;
+}
+
+/* Ajuste para celular */
+@media (max-width: 480px) {
+  main {
+    padding: 20px;
+  }
+
+  .entrada {
+    flex-wrap: wrap;
+  }
+
+  #campo-tarefa {
+    min-width: 100%;
+  }
+}

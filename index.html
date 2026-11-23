@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <title>Minhas Tarefas</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+ <main>
+  <h1>📝 Minhas Tarefas</h1>
+
+  <div class="entrada">
+    <input type="text" id="campo-tarefa" placeholder="O que precisa ser feito?">
+  <select id="prioridade">
+    <option value="alta">Alta</option>
+    <option value="media">Média</option>
+    <option value="baixa">Baixa</option>
+  </select>
+
+    <button id="btn-adicionar">Adicionar</button>
+  </div>
+
+    <p id="contador-caracteres">140 caracteres restantes</p>
+
+  <div class="filtros">
+    <button id="btn-limpar">Limpar concluídos</button>
+    <button id="todos">Todos</button>
+    <button id="pendentes">Pendentes</button>
+    <button id="concluidas">Concluídas</button>
+  </div>
+
+  <p id="contador">0 pendente(s) de 0</p>
+
+  <ul id="lista-tarefas"></ul>
+</main>
+  <script src="script.js"></script>
+</body>
+</html>
